@@ -1,0 +1,12 @@
+C++,
+Python,
+Django,
+Flask,
+CV,
+Powershell,
+HTML,
+CSS,
+LUA,
+FHIR,
+GPT-J,
+

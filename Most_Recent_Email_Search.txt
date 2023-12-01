@@ -1,0 +1,86 @@
+Delivered-To: theceresapp@gmail.com
+Received: by 2002:a0c:db06:0:b0:65d:9ba:1cc0 with SMTP id d6csp751487qvk;
+        Fri, 6 Oct 2023 21:34:30 -0700 (PDT)
+X-Received: by 2002:a17:906:31c5:b0:9a2:5bf:8b14 with SMTP id f5-20020a17090631c500b009a205bf8b14mr9653469ejf.22.1696653270168;
+        Fri, 06 Oct 2023 21:34:30 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1696653270; cv=none;
+        d=google.com; s=arc-20160816;
+        b=VrAlkOEQccCqBR1hVnh5MMWbehE02W0wec1ONByMOHBGW8jSdQhoS8stC8cSr0GhmL
+         77AU0xAV0Z7XMvXtroDuPBOXaV0lWTf0kGW+iiBa8Lbpyix3XpUUzr3qbNGyaraM6a75
+         vGpaTuEg2sfMMzPR5gdnXhQzdZwqH6fUTr6zRN+HvvqYO5PIUnFrU+wk4CAXB+lzy3w3
+         PB5h0K4FiuQ+p8f+82Gz5U241w8VoCbNZwDGQDDWSs4Yh+TkROo+J26EYJ6VOvEPlcIl
+         EmF5+gMlwSbAZ5QIDAvUYD5qJ4iNXsL3Gs/MzozEIAuQJRI4HCD6l2ScHhPIkXlrnXPa
+         sW6w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=bHFwZ/Ns297St4DkrOkHmyzwlCOAo4ZMAJtso39J1Ag=;
+        fh=MWXtFYY5mlToIaf94RAZgAvMvMq8OUbYeUM82Syq6cI=;
+        b=yppV5ek3lJ1GRfpe0bQfDkPnHfI+0iSQSVvRvEKZYG6R178UVLXi3fp+p467/ogBlI
+         t7vneCifZjF8urCJzylfC0G7aC/7T29lDbQJxBUDbZgU6fX2kHmcaG/fTLids2paVJqA
+         ladLczMiGStgocHUct5bVv/Tk/yyG3VCvevFduCwg2Hlcf7oOUKWOI0iV+4pneILjCLP
+         Y1I/ZNXnUUN2smR1SPUt4ZW4JijO3N4sTkGKlz8NxVBPKT2sexoVdO1yK9SqR4WItQ0Q
+         ixoVVhXVm/OEbcilQLfsBHoKJjABPiud3M/Vcfz1xzMFFs87yynxW5KAEdNH4foDBYJI
+         tP8Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=D3fvaWbN;
+       spf=pass (google.com: domain of adamsprojects412@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=adamsprojects412@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <adamsprojects412@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id gx12-20020a1709068a4c00b009a202c25e24sor2034308ejc.8.2023.10.06.21.34.30
+        for <theceresapp@gmail.com>
+        (Google Transport Security);
+        Fri, 06 Oct 2023 21:34:30 -0700 (PDT)
+Received-SPF: pass (google.com: domain of adamsprojects412@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=D3fvaWbN;
+       spf=pass (google.com: domain of adamsprojects412@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=adamsprojects412@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1696653269; x=1697258069; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=bHFwZ/Ns297St4DkrOkHmyzwlCOAo4ZMAJtso39J1Ag=;
+        b=D3fvaWbNDMTbOEm9jyUTio2m7flOOVPbd3gW8yIico7CGvAtvXg2xzNwzBcZnunqNH
+         Afgt3Batf7pooafBTXYMsf4B+UEwD0AnFzg3gjeY+5BkKN1H0+q1fr1U/1dbZ4zyUYJ7
+         IiF2bSl46je6fw04VDnVdoKEg5BK+hAYkpFtlBqDPEBw35jhYSqifM3N7gnGZwS9nfJq
+         E0dHDAUfDA2mTUKs9Z3G/MgYREvCkOGIQX7XpnDYb5rjuep3W8B7gl6lYTxsq7xz1eCx
+         0xqADfvxnNxVotdhPltEhCOcuoGcVr9FMMBDQG/oUFG5HKLbaHByTayhwYW0PYK11vYa
+         Mfjw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1696653269; x=1697258069;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=bHFwZ/Ns297St4DkrOkHmyzwlCOAo4ZMAJtso39J1Ag=;
+        b=TEwWNzltnKWYiMY6nBpqMz/M6ynayP1yrjCr71dIMr4pfwl2qcrMTYJ9BV8kteMfvG
+         4l9icYlOmeaxDa0N/pc7le4R59cKN7JFkNcrJpTmTBIZm+7R6zEg0Fp8OhQO3AKsvWr5
+         ThPIRkG49YR1Rr2bbkOVLlgrfLVnm1EBTVyzr+z4WfZYySDltNeph7E0Ed0EAMCQ0/IG
+         /3M+yediE9U75jOkJvsUY5mq0uJ6cNUGLx9G+GvaFfKkvrYeTtgEnfNPuaHvFd8IkmOd
+         JsLwTG8oyhuBI4/wgWKFtv+q1NEn8exRBVhX+ZQEWq7oJ5BoSyiLbtIZJdS/yYiQDdbh
+         /i2g==
+X-Gm-Message-State: AOJu0YwFU/v9bJxbz4NI50wvzSJBl+iVrWalSvdx+Gi/GpKRSZy5P1Yt
+	dGaBweTG4dmanTsd0aKBlyvRk8QVOKUatrFXJHb5PDE4
+X-Google-Smtp-Source: AGHT+IGkUand71QW4uIxwra561yoCDmPDK1aPKcn9th4BwN5LTX/JhG6YwxRBOESwfaMHAc3AG6gPNKPfY69PXoD40Q=
+X-Received: by 2002:a17:907:77c5:b0:9ad:e180:16e3 with SMTP id
+ kz5-20020a17090777c500b009ade18016e3mr8692636ejc.37.1696653269409; Fri, 06
+ Oct 2023 21:34:29 -0700 (PDT)
+MIME-Version: 1.0
+From: adam lewis <adamsprojects412@gmail.com>
+Date: Fri, 6 Oct 2023 23:34:20 -0500
+Message-ID: <CAPk9D0HbGaZP8uztPdLiTsBgOTnDpBkpMrV5pYKH8BQfHjBrxQ@mail.gmail.com>
+Subject: Resources
+To: theceresapp@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000006e2478060718dfae"
+
+--0000000000006e2478060718dfae
+Content-Type: text/plain; charset="UTF-8"
+
+python-django,
+python-pandas,
+
+--0000000000006e2478060718dfae
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">python-django,<div>python-pandas,</div></div>
+
+--0000000000006e2478060718dfae--
